@@ -10,6 +10,10 @@ const PokemonList = ({ pokemons }) => {
       setPrev(prev - 15);
       setNext(next - 15);
     }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const handleNext = () => {
@@ -17,6 +21,10 @@ const PokemonList = ({ pokemons }) => {
       setPrev(prev + 15);
       setNext(next + 15);
     }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (

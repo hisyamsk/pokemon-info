@@ -1,5 +1,6 @@
 import React from "react";
 import Meta from "../../components/Meta";
+import Image from "next/image";
 
 export const getStaticPaths = async () => {
   const res = await fetch(
@@ -35,10 +36,12 @@ const Pokemon = ({ pokemon }) => {
       <Meta title={`PokemonInfo | ${pokemon.name}`} />
       <section>
         <div className="text-center mx-auto" style={{ maxWidth: "350px" }}>
-          <img
+          <Image
             src={pokemon.sprites.other["official-artwork"].front_default}
-            alt=""
+            alt={pokemon.name}
             className="img-fluid"
+            width={350}
+            height={350}
           />
           <div className="d-flex justify-content-center my-3">
             <span className="badge bg-success me-1 text-capitalize">
@@ -62,9 +65,9 @@ const Pokemon = ({ pokemon }) => {
               </tr>
             </thead>
             <tbody>
-              {pokemon.stats.map((stat) => {
+              {pokemon.stats.map((stat, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <th className="text-uppercase text-start fw-normal">
                       <span>{stat.stat.name}</span>
                     </th>

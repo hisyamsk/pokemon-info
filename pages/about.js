@@ -12,13 +12,17 @@ const About = () => {
         </div>
         <div className="my-3">
           <h3>API Used: </h3>
-          <a href="https://pokeapi.co/" target="_blank">
+          <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">
             PokeAPI
           </a>
         </div>
         <div className="my-3">
           <h3>Source Code: </h3>
-          <a href="github.com/hisyamsk/pokemon-info" target="_blank">
+          <a
+            href="github.com/hisyamsk/pokemon-info"
+            target="_blank"
+            rel="noreferrer"
+          >
             Github
           </a>
         </div>
