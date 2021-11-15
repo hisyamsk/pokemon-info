@@ -19,7 +19,7 @@ const About = () => {
         <div className="my-3">
           <h3>Source Code: </h3>
           <a
-            href="github.com/hisyamsk/pokemon-info"
+            href="https://github.com/hisyamsk/pokemon-info"
             target="_blank"
             rel="noreferrer"
           >
